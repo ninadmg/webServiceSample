@@ -24,8 +24,8 @@ public class User {
     private String location;
     private String websiteUrl;
     private String link;
-    private String profileImage;
-    private String displayName;
+    private String profile_image;
+    private String display_name;
 
     public BadgeCounts getBadgeCounts() {
         return badgeCounts;
@@ -180,18 +180,18 @@ public class User {
     }
 
     public String getProfileImage() {
-        return profileImage;
+        return profile_image;
     }
 
     public void setProfileImage(String profileImage) {
-        this.profileImage = profileImage;
+        this.profile_image = profileImage;
     }
 
     public String getDisplayName() {
-        return displayName;
+        return display_name;
     }
 
     public void setDisplayName(String displayName) {
-        this.displayName = displayName;
+        this.display_name = displayName;
     }
 }

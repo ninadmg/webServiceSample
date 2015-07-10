@@ -2,6 +2,7 @@ package in.ninad.app.webservicesample;
 
 import android.os.AsyncTask;
 
+import in.ninad.app.webservicesample.Interface.IUsersService;
 import in.ninad.app.webservicesample.model.UserServiceModel;
 import retrofit.RestAdapter;
 
@@ -19,8 +20,8 @@ public class WebcallAsyncTask extends AsyncTask<Void,Void,UserServiceModel> {
         RestAdapter restAdapter = new RestAdapter.Builder()
                 .setEndpoint("https://api.stackexchange.com/2.2")
                 .build();
-        restAdapter.create()
-
-        return null;
+        IUsersService usersService = restAdapter.create(IUsersService.class);
+        UserServiceModel serviceModel = usersService.getUsers("desc","stackoverflow");
+        return serviceModel;
     }
 }
